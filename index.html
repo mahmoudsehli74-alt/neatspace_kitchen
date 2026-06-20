@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Kitchen Gadgets | Premium Kitchen Innovation</title>
+  <meta name="description" content="Discover innovative smart kitchen gadgets that transform everyday cooking into a delightful experience. Curated for the modern home chef. Shop premium tools with free worldwide shipping.">
+  <meta name="keywords" content="smart kitchen gadgets, kitchen tools, cooking accessories, electric chopper, digital scale, kitchen innovation">
+  <meta name="author" content="SmartKitchen">
+  <meta property="og:title" content="Smart Kitchen Gadgets | Premium Kitchen Innovation">
+  <meta property="og:description" content="Curated smart kitchen gadgets for the modern home chef. Elevate your cooking experience.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://neatspace-kitchen.github.io/">
+
+  <!-- ==================== Google Fonts: Inter ==================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- ==================== Tailwind CSS CDN ==================== -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- ==================== Custom Styles ==================== -->
+  <style>
+    /* ---------- Base ---------- */
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+
+    /* ---------- Custom Scrollbar ---------- */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #555; }
+
+    /* ---------- Line Clamp Utility ---------- */
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* ---------- Product Card Hover ---------- */
+    .product-card {
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* ---------- Toast Animations ---------- */
+    @keyframes slideInUp {
+      from { transform: translateY(100%); opacity: 0; }
+      to   { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes slideOutDown {
+      from { transform: translateY(0); opacity: 1; }
+      to   { transform: translateY(100%); opacity: 0; }
+    }
+    .toast-enter { animation: slideInUp 0.3s ease-out forwards; }
+    .toast-exit  { animation: slideOutDown 0.3s ease-in forwards; }
+
+    /* ---------- Skeleton Loading Pulse ---------- */
+    @keyframes shimmer {
+      0%   { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .skeleton {
+      background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+      border-radius: 0.75rem;
+    }
+
+    /* ---------- Cart Drawer Transition ---------- */
+    .cart-drawer-transition {
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ---------- Featured Image Crossfade ---------- */
+    .featured-img {
+      transition: opacity 0.7s ease-in-out;
+    }
+
+    /* ---------- Pinterest Button Glow ---------- */
+    .pin-btn:hover {
+      box-shadow: 0 0 0 4px rgba(230, 0, 35, 0.15);
+    }
+
+    /* ---------- Dot Navigation Active Pill ---------- */
+    .dot-active {
+      width: 2rem;
+      background: white;
+    }
+    .dot-inactive {
+      width: 0.5rem;
+      background: rgba(255,255,255,0.5);
+    }
+    .dot-inactive:hover {
+      background: rgba(255,255,255,0.7);
+    }
+
+    /* ---------- Badge Pulse ---------- */
+    @keyframes badgePulse {
+      0%, 100% { transform: scale(1); }
+      50%      { transform: scale(1.1); }
+    }
+    .badge-pulse { animation: badgePulse 2s ease-in-out infinite; }
+  </style>
+</head>
+
+<body class="bg-white text-[#00073F] antialiased">
+
+  <!-- ================================================================
+       NAVIGATION
+       ================================================================ -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent">
+    <div class="w-full px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2">
+          <span class="text-xl lg:text-2xl font-bold tracking-tight text-[#00073F]">SmartKitchen</span>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-medium text-[#00073F]/80 hover:text-[#003CFF] transition-colors duration-200">Home</a>
+          <a href="#products" class="text-sm font-medium text-[#00073F]/80 hover:text-[#003CFF] transition-colors duration-200">Products</a>
+          <a href="#tips" class="text-sm font-medium text-[#00073F]/80 hover:text-[#003CFF] transition-colors duration-200">Tips</a>
+          <a href="privacy.html" class="text-sm font-medium text-[#00073F]/80 hover:text-[#003CFF] transition-colors duration-200">Privacy</a>
+        </div>
+
+        <!-- Right Side: Cart + Mobile Menu -->
+        <div class="flex items-center gap-4">
+          <!-- Cart Button -->
+          <button id="cart-toggle-btn" class="relative p-2 rounded-full hover:bg-[#00073F]/5 transition-colors duration-200" aria-label="Open cart" onclick="Cart.toggle()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+            <span id="cart-badge" class="absolute -top-1 -right-1 w-5 h-5 bg-[#FF6B5B] text-white text-xs font-bold rounded-full items-center justify-center badge-pulse hidden">0</span>
+          </button>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="md:hidden p-2 rounded-full hover:bg-[#00073F]/5 transition-colors duration-200" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+            <svg id="menu-icon-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            <svg id="menu-icon-close" class="hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white/95 backdrop-blur-xl border-t border-gray-100">
+      <div class="px-4 sm:px-6 py-4 flex flex-col gap-2">
+        <a href="index.html" onclick="closeMobileMenu()" class="py-3 px-4 text-sm font-medium text-[#00073F]/80 hover:text-[#003CFF] hover:bg-[#00073F]/5 rounded-lg transition-colors">Home</a>
+        <a href="#products" onclick="closeMobileMenu()" class="py-3 px-4 text-sm font-medium text-[#00073F]/80 hover:text-[#003CFF] hover:bg-[#00073F]/5 rounded-lg transition-colors">Products</a>
+        <a href="#tips" onclick="closeMobileMenu()" class="py-3 px-4 text-sm font-medium text-[#00073F]/80 hover:text-[#003CFF] hover:bg-[#00073F]/5 rounded-lg transition-colors">Tips</a>
+        <a href="privacy.html" onclick="closeMobileMenu()" class="py-3 px-4 text-sm font-medium text-[#00073F]/80 hover:text-[#003CFF] hover:bg-[#00073F]/5 rounded-lg transition-colors">Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ================================================================
+       HERO SECTION — WebGL Procedural Shader Background
+       ================================================================ -->
+  <section id="hero" class="relative w-full min-h-[100dvh] flex items-center justify-center overflow-hidden">
+    <!-- WebGL Canvas -->
+    <canvas id="hero-canvas" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;"></canvas>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-4xl mx-auto">
+      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#888888] mb-6">
+        Premium Kitchen Innovation
+      </p>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-[5vw] font-normal leading-[1.1] text-[#00073F] mb-6 tracking-tight">
+        Smart Kitchen<br>
+        <span class="text-[#003CFF]">Gadgets</span>
+      </h1>
+      <p class="text-base md:text-lg text-[#888888] max-w-xl mx-auto mb-10 leading-relaxed">
+        Discover innovative tools that transform everyday cooking into a
+        delightful experience. Curated for the modern home chef.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <button onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})"
+                class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#00073F] text-white text-sm font-semibold uppercase tracking-wider rounded-full transition-all duration-300 hover:bg-[#003CFF] hover:shadow-lg hover:-translate-y-0.5">
+          Shop Collection
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </button>
+        <a href="#tips"
+           class="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-[#00073F] text-[#00073F] text-sm font-semibold uppercase tracking-wider rounded-full transition-all duration-300 hover:bg-[#00073F] hover:text-white">
+          Explore Tips
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom gradient fade -->
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none"></div>
+  </section>
+
+
+  <!-- ================================================================
+       FEATURED SECTION — Auto-Rotating Product Showcase
+       ================================================================ -->
+  <section id="featured" class="w-full py-20 lg:py-32 bg-white">
+    <div class="px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24">
+      <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+
+        <!-- Image Carousel -->
+        <div class="relative aspect-square max-w-lg mx-auto lg:mx-0 w-full">
+          <div id="featured-images" class="relative w-full h-full rounded-3xl overflow-hidden bg-gray-50">
+            <!-- Images injected by JS -->
+          </div>
+          <!-- Navigation Dots -->
+          <div id="featured-dots" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+            <!-- Dots injected by JS -->
+          </div>
+          <!-- Floating Badge -->
+          <div class="absolute -top-3 -right-3 w-20 h-20 bg-[#FF6B5B] rounded-full flex items-center justify-center shadow-lg z-20">
+            <div class="text-center text-white">
+              <p class="text-lg font-bold leading-none">BEST</p>
+              <p class="text-xs font-medium uppercase">Seller</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Side -->
+        <div class="lg:pl-8">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#003CFF] mb-4">Featured Collection</p>
+          <h2 id="featured-title" class="text-3xl md:text-4xl lg:text-[2.8vw] font-normal leading-[1.1] text-[#00073F] mb-4"></h2>
+          <div id="featured-rating" class="flex items-center gap-3 mb-4"></div>
+          <p id="featured-desc" class="text-base text-[#888888] leading-relaxed mb-6"></p>
+          <p id="featured-price" class="text-3xl font-semibold text-[#00073F] mb-8"></p>
+
+          <!-- Features List -->
+          <div class="grid grid-cols-2 gap-3 mb-8">
+            <div class="flex items-center gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <span class="text-xs text-[#888888]">Free worldwide shipping</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <span class="text-xs text-[#888888]">30-day money back guarantee</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <span class="text-xs text-[#888888]">2-year manufacturer warranty</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <span class="text-xs text-[#888888]">24/7 customer support</span>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button id="featured-add-btn" onclick="handleFeaturedAddToCart()"
+                    class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#00073F] text-white text-sm font-semibold uppercase tracking-wider rounded-full transition-all duration-300 hover:bg-[#003CFF] hover:shadow-lg hover:-translate-y-0.5">
+              Add to Cart
+            </button>
+            <button id="featured-shop-btn" onclick="handleFeaturedShopNow()"
+                    class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#FF6B5B] text-white text-sm font-semibold uppercase tracking-wider rounded-full transition-all duration-300 hover:bg-[#ff8578] hover:shadow-lg hover:-translate-y-0.5">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              Shop on AliExpress
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       PRODUCTS GRID — Fetched from products.json
+       ================================================================ -->
+  <section id="products" class="w-full py-20 lg:py-32 bg-[#00073F]">
+    <div class="px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24">
+
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#003CFF] mb-4">Our Collection</p>
+        <h2 class="text-3xl md:text-4xl lg:text-[2.8vw] font-normal leading-[1.1] text-white mb-4">Shop Smart Gadgets</h2>
+        <p class="text-base text-white/60 max-w-xl mx-auto">
+          Browse our curated selection of premium kitchen tools designed to make cooking effortless.
+        </p>
+      </div>
+
+      <!-- Category Filters -->
+      <div id="category-filters" class="flex items-center justify-center gap-2 mb-12 flex-wrap">
+        <svg class="w-4 h-4 text-white/40 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+        <!-- Filter buttons injected by JS -->
+      </div>
+
+      <!-- Loading Skeleton -->
+      <div id="products-loading" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div class="rounded-2xl overflow-hidden bg-white/10"><div class="skeleton aspect-[4/5]"></div><div class="p-4 space-y-2"><div class="skeleton h-3 w-16"></div><div class="skeleton h-4 w-full"></div><div class="skeleton h-3 w-24"></div><div class="skeleton h-5 w-16"></div></div></div>
+        <div class="rounded-2xl overflow-hidden bg-white/10"><div class="skeleton aspect-[4/5]"></div><div class="p-4 space-y-2"><div class="skeleton h-3 w-16"></div><div class="skeleton h-4 w-full"></div><div class="skeleton h-3 w-24"></div><div class="skeleton h-5 w-16"></div></div></div>
+        <div class="rounded-2xl overflow-hidden bg-white/10 hidden sm:block"><div class="skeleton aspect-[4/5]"></div><div class="p-4 space-y-2"><div class="skeleton h-3 w-16"></div><div class="skeleton h-4 w-full"></div><div class="skeleton h-3 w-24"></div><div class="skeleton h-5 w-16"></div></div></div>
+        <div class="rounded-2xl overflow-hidden bg-white/10 hidden xl:block"><div class="skeleton aspect-[4/5]"></div><div class="p-4 space-y-2"><div class="skeleton h-3 w-16"></div><div class="skeleton h-4 w-full"></div><div class="skeleton h-3 w-24"></div><div class="skeleton h-5 w-16"></div></div></div>
+      </div>
+
+      <!-- Error State -->
+      <div id="products-error" class="hidden text-center py-20">
+        <svg class="w-16 h-16 text-white/20 mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
+        <p class="text-white/60 text-lg mb-4">Failed to load products</p>
+        <button onclick="loadProducts()" class="px-6 py-3 bg-[#003CFF] text-white text-sm font-semibold uppercase tracking-wider rounded-full hover:bg-[#003CFF]/80 transition-colors">
+          Try Again
+        </button>
+      </div>
+
+      <!-- Products Grid Container -->
+      <div id="products-grid" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
+
+      <!-- Empty State -->
+      <div id="products-empty" class="hidden text-center py-20">
+        <p class="text-white/40 text-lg">No products found in this category.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       KITCHEN TIPS & TRICKS
+       ================================================================ -->
+  <section id="tips" class="w-full py-20 lg:py-32 bg-gray-50">
+    <div class="px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24">
+
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#003CFF] mb-4">Kitchen Wisdom</p>
+        <h2 class="text-3xl md:text-4xl lg:text-[2.8vw] font-normal leading-[1.1] text-[#00073F] mb-4">Tips & Tricks</h2>
+        <p class="text-base text-[#888888] max-w-xl mx-auto">
+          Expert advice to help you get the most out of your kitchen gadgets and elevate your cooking.
+        </p>
+      </div>
+
+      <!-- Tips Grid -->
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Tip 1: Prep Like a Pro -->
+        <div class="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
+          <div class="relative aspect-[16/9] overflow-hidden">
+            <img src="images/tip-prep.jpg" alt="Prep Like a Pro" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+            <div class="absolute top-4 left-4 flex items-center gap-2 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#003CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+              <span class="text-xs font-medium text-[#00073F]">Technique</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-medium text-[#00073F] mb-3 group-hover:text-[#003CFF] transition-colors">Prep Like a Pro</h3>
+            <p class="text-sm text-[#888888] leading-relaxed mb-4">Mise en place is the secret of every great chef. Measure, chop, and organize all ingredients before you start cooking. Use our smart digital scale for perfect portioning every time.</p>
+            <button class="inline-flex items-center gap-2 text-sm font-medium text-[#003CFF] hover:gap-3 transition-all">
+              Read More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tip 2: Organize Your Space -->
+        <div class="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
+          <div class="relative aspect-[16/9] overflow-hidden">
+            <img src="images/tip-organize.jpg" alt="Organize Your Space" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+            <div class="absolute top-4 left-4 flex items-center gap-2 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#003CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+              <span class="text-xs font-medium text-[#00073F]">Organization</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-medium text-[#00073F] mb-3 group-hover:text-[#003CFF] transition-colors">Organize Your Space</h3>
+            <p class="text-sm text-[#888888] leading-relaxed mb-4">A clutter-free kitchen is an efficient kitchen. Use magnetic strips for knives, drawer dividers for utensils, and wall-mounted racks to free up counter space. Smart organization transforms your workflow.</p>
+            <button class="inline-flex items-center gap-2 text-sm font-medium text-[#003CFF] hover:gap-3 transition-all">
+              Read More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tip 3: Clean As You Go -->
+        <div class="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
+          <div class="relative aspect-[16/9] overflow-hidden">
+            <img src="images/tip-clean.jpg" alt="Clean As You Go" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+            <div class="absolute top-4 left-4 flex items-center gap-2 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#003CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+              <span class="text-xs font-medium text-[#00073F]">Maintenance</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-medium text-[#00073F] mb-3 group-hover:text-[#003CFF] transition-colors">Clean As You Go</h3>
+            <p class="text-sm text-[#888888] leading-relaxed mb-4">The best kitchen habit is cleaning while cooking. Rinse tools between uses, wipe counters immediately, and load the dishwasher progressively. Your future self will thank you when the meal is done.</p>
+            <button class="inline-flex items-center gap-2 text-sm font-medium text-[#003CFF] hover:gap-3 transition-all">
+              Read More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Tip 4: Master the Temperature -->
+        <div class="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
+          <div class="relative aspect-[16/9] overflow-hidden">
+            <img src="images/tip-cook.jpg" alt="Master the Temperature" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+            <div class="absolute top-4 left-4 flex items-center gap-2 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#003CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+              <span class="text-xs font-medium text-[#00073F]">Cooking</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-medium text-[#00073F] mb-3 group-hover:text-[#003CFF] transition-colors">Master the Temperature</h3>
+            <p class="text-sm text-[#888888] leading-relaxed mb-4">Invest in a quality thermometer. Overcooked meat loses flavor and texture. Our wireless smart thermometer alerts you when food reaches the perfect internal temperature, every single time.</p>
+            <button class="inline-flex items-center gap-2 text-sm font-medium text-[#003CFF] hover:gap-3 transition-all">
+              Read More
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       NEWSLETTER SECTION
+       ================================================================ -->
+  <section id="newsletter" class="w-full py-20 lg:py-32 bg-[#003CFF]">
+    <div class="px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24">
+      <div class="max-w-2xl mx-auto text-center">
+        <svg class="w-10 h-10 text-white/80 mx-auto mb-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <h2 class="text-3xl md:text-4xl font-normal leading-[1.1] text-white mb-4">Stay in the Loop</h2>
+        <p class="text-base text-white/70 mb-8">
+          Subscribe to our newsletter for exclusive deals, new arrivals, and kitchen inspiration delivered to your inbox.
+        </p>
+
+        <!-- Form -->
+        <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="handleNewsletterSubmit(event)">
+          <input type="email" id="newsletter-email" placeholder="Enter your email" required
+                 class="flex-1 px-5 py-3.5 bg-white/10 border border-white/20 rounded-full text-white placeholder-white/50 text-sm focus:outline-none focus:border-white/50 transition-colors">
+          <button type="submit"
+                  class="px-6 py-3.5 bg-white text-[#003CFF] text-sm font-semibold uppercase tracking-wider rounded-full hover:bg-white/90 transition-colors flex items-center justify-center gap-2">
+            Subscribe
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </form>
+
+        <!-- Success Message (hidden by default) -->
+        <div id="newsletter-success" class="hidden flex items-center justify-center gap-3 py-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+          <p class="text-lg font-medium text-white">Thanks for subscribing!</p>
+        </div>
+
+        <p class="text-xs text-white/40 mt-4">No spam, ever. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       FOOTER
+       ================================================================ -->
+  <footer class="w-full bg-[#00073F] text-white">
+    <div class="px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24 py-16 lg:py-20">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-16">
+
+        <!-- Brand Column -->
+        <div class="col-span-2 md:col-span-1">
+          <a href="index.html" class="text-2xl font-bold tracking-tight">SmartKitchen</a>
+          <p class="text-sm text-white/50 mt-4 leading-relaxed max-w-xs">
+            Curated smart kitchen gadgets for the modern home chef. Elevate your cooking experience.
+          </p>
+        </div>
+
+        <!-- Shop Links -->
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-white/40 mb-4">Shop</h4>
+          <ul class="space-y-3">
+            <li><a href="#products" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">All Products</a></li>
+            <li><a href="#products" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">Best Sellers</a></li>
+            <li><a href="#products" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">New Arrivals</a></li>
+            <li><a href="#products" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">On Sale</a></li>
+          </ul>
+        </div>
+
+        <!-- Support Links -->
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-white/40 mb-4">Support</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">Contact Us</a></li>
+            <li><a href="#" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">Shipping Info</a></li>
+            <li><a href="#" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">Returns</a></li>
+            <li><a href="#" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Links -->
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-white/40 mb-4">Legal</h4>
+          <ul class="space-y-3">
+            <li><a href="privacy.html" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">Cookie Policy</a></li>
+            <li><a href="privacy.html" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">GDPR</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-white/10">
+      <div class="px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-white/40" id="footer-year"></p>
+        <div class="flex items-center gap-1 text-xs text-white/40">
+          <span>Affiliate links powered by</span>
+          <a href="https://www.aliexpress.com" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-1 text-white/60 hover:text-[#FF6B5B] transition-colors">
+            AliExpress
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ================================================================
+       CART DRAWER (Off-canvas Right)
+       ================================================================ -->
+  <!-- Backdrop -->
+  <div id="cart-backdrop" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-[60] transition-opacity hidden" onclick="Cart.close()"></div>
+
+  <!-- Drawer Panel -->
+  <div id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl z-[70] transform translate-x-full cart-drawer-transition flex flex-col">
+    <!-- Header -->
+    <div class="flex items-center justify-between p-6 border-b border-gray-100 flex-shrink-0">
+      <div class="flex items-center gap-3">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00073F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <h2 class="text-lg font-semibold text-[#00073F]">Your Cart (<span id="cart-header-count">0</span>)</h2>
+      </div>
+      <button onclick="Cart.close()" class="p-2 rounded-full hover:bg-gray-100 transition-colors" aria-label="Close cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00073F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- Cart Items Container -->
+    <div id="cart-items" class="flex-1 overflow-y-auto p-6">
+      <!-- Items rendered by JS -->
+    </div>
+
+    <!-- Cart Footer (subtotal + checkout) -->
+    <div id="cart-footer" class="hidden p-6 bg-white border-t border-gray-100 flex-shrink-0">
+      <div class="flex items-center justify-between mb-4">
+        <span class="text-sm text-[#888888]">Subtotal</span>
+        <span id="cart-subtotal" class="text-lg font-semibold text-[#00073F]">$0.00</span>
+      </div>
+      <button id="cart-checkout-btn" onclick="handleCartCheckout()"
+              class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#FF6B5B] text-white text-sm font-semibold uppercase tracking-wider rounded-full transition-all duration-300 hover:bg-[#ff8578] hover:shadow-lg hover:-translate-y-0.5 mb-2">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+        Check Price on AliExpress
+      </button>
+      <button onclick="Cart.clear()" class="w-full py-2 text-xs text-[#888888] hover:text-[#FF6B5B] transition-colors">
+        Clear Cart
+      </button>
+    </div>
+  </div>
+
+
+  <!-- ================================================================
+       PINTEREST MODAL
+       ================================================================ -->
+  <div id="pinterest-modal" class="fixed inset-0 z-[80] flex items-center justify-center p-4 hidden">
+    <div class="absolute inset-0 bg-black/40 backdrop-blur-sm" onclick="closePinterestModal()"></div>
+    <div class="relative bg-white rounded-2xl shadow-2xl max-w-sm w-full p-6 z-10">
+      <button onclick="closePinterestModal()" class="absolute top-4 right-4 p-1 rounded-full hover:bg-gray-100 transition-colors">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#888888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+      <div id="pinterest-content">
+        <!-- Content rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ================================================================
+       TOAST CONTAINER
+       ================================================================ -->
+  <div id="toast-container" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[90] flex flex-col gap-2 items-center pointer-events-none"></div>
+
+
+  <!-- ================================================================
+       JAVASCRIPT ENGINE
+       ================================================================ -->
+  <script>
+  /* ================================================================
+   *  GLOBAL STATE
+   * ================================================================ */
+  let allProducts = [];
+  let activeCategory = 'All';
+  let featuredIndex = 0;
+  let featuredInterval = null;
+  const CATEGORIES = ['All', 'Prep Tools', 'Cooking', 'Measuring', 'Beverage', 'Organization'];
+
+
+  /* ================================================================
+   *  CART STATE MANAGEMENT (Vanilla JS)
+   *  Mirrors React Context/Reducer pattern with direct DOM updates
+   * ================================================================ */
+  const Cart = {
+    items: [],
+    isOpen: false,
+
+    addItem(product) {
+      const existing = this.items.find(i => i.product.id === product.id);
+      if (existing) {
+        existing.quantity++;
+      } else {
+        this.items.push({ product: { ...product }, quantity: 1 });
+      }
+      this.isOpen = true;
+      this.render();
+    },
+
+    removeItem(productId) {
+      this.items = this.items.filter(i => i.product.id !== productId);
+      this.render();
+    },
+
+    updateQuantity(productId, quantity) {
+      if (quantity <= 0) {
+        this.removeItem(productId);
+        return;
+      }
+      const item = this.items.find(i => i.product.id === productId);
+      if (item) item.quantity = quantity;
+      this.render();
+    },
+
+    clear() {
+      this.items = [];
+      this.render();
+    },
+
+    toggle() {
+      this.isOpen = !this.isOpen;
+      this.render();
+    },
+
+    open() {
+      this.isOpen = true;
+      this.render();
+    },
+
+    close() {
+      this.isOpen = false;
+      this.render();
+    },
+
+    get totalItems() {
+      return this.items.reduce((sum, i) => sum + i.quantity, 0);
+    },
+
+    get totalPrice() {
+      return this.items.reduce((sum, i) => sum + i.product.price * i.quantity, 0);
+    },
+
+    /* Render the entire cart UI to the DOM */
+    render() {
+      // -- Drawer visibility --
+      const drawer = document.getElementById('cart-drawer');
+      const backdrop = document.getElementById('cart-backdrop');
+      if (this.isOpen) {
+        drawer.classList.remove('translate-x-full');
+        drawer.classList.add('translate-x-0');
+        backdrop.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      } else {
+        drawer.classList.add('translate-x-full');
+        drawer.classList.remove('translate-x-0');
+        backdrop.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      // -- Cart badge in nav --
+      const badge = document.getElementById('cart-badge');
+      const total = this.totalItems;
+      if (total > 0) {
+        badge.textContent = total;
+        badge.classList.remove('hidden');
+        badge.classList.add('flex');
+      } else {
+        badge.classList.add('hidden');
+        badge.classList.remove('flex');
+      }
+
+      // -- Header count --
+      document.getElementById('cart-header-count').textContent = total;
+
+      // -- Cart items --
+      const container = document.getElementById('cart-items');
+      if (this.items.length === 0) {
+        container.innerHTML = `
+          <div class="flex flex-col items-center justify-center h-64 text-center">
+            <svg class="w-16 h-16 text-gray-200 mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <p class="text-lg font-medium text-[#00073F] mb-2">Your cart is empty</p>
+            <p class="text-sm text-[#888888]">Add some smart gadgets to get started!</p>
+          </div>`;
+      } else {
+        container.innerHTML = this.items.map(item => `
+          <div class="flex gap-4 p-3 bg-gray-50 rounded-xl mb-4">
+            <img src="${item.product.image}" alt="${item.product.title}" class="w-20 h-20 object-cover rounded-lg">
+            <div class="flex-1 min-w-0">
+              <h4 class="text-sm font-medium text-[#00073F] truncate">${item.product.title}</h4>
+              <p class="text-sm text-[#888888] mt-0.5">${item.product.currency}${item.product.price.toFixed(2)}</p>
+              <div class="flex items-center gap-2 mt-2">
+                <button onclick="Cart.updateQuantity('${item.product.id}', ${item.quantity - 1})"
+                        class="w-7 h-7 flex items-center justify-center rounded-full bg-white border border-gray-200 hover:border-[#003CFF] transition-colors">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/></svg>
+                </button>
+                <span class="text-sm font-medium w-6 text-center">${item.quantity}</span>
+                <button onclick="Cart.updateQuantity('${item.product.id}', ${item.quantity + 1})"
+                        class="w-7 h-7 flex items-center justify-center rounded-full bg-white border border-gray-200 hover:border-[#003CFF] transition-colors">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+                </button>
+                <button onclick="Cart.removeItem('${item.product.id}')" class="ml-auto text-xs text-[#FF6B5B] hover:underline">Remove</button>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // -- Cart footer --
+      const footer = document.getElementById('cart-footer');
+      if (this.items.length > 0) {
+        footer.classList.remove('hidden');
+        document.getElementById('cart-subtotal').textContent = '$' + this.totalPrice.toFixed(2);
+      } else {
+        footer.classList.add('hidden');
+      }
+    }
+  };
+
+
+  /* ================================================================
+   *  TOAST NOTIFICATION SYSTEM
+   * ================================================================ */
+  function showToast(message) {
+    const container = document.getElementById('toast-container');
+    const toast = document.createElement('div');
+    toast.className = 'toast-enter pointer-events-auto px-6 py-3 bg-[#00073F] text-white text-sm font-medium rounded-full shadow-xl flex items-center gap-2';
+    toast.innerHTML = `
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+      ${message}
+    `;
+    container.appendChild(toast);
+    setTimeout(() => {
+      toast.classList.remove('toast-enter');
+      toast.classList.add('toast-exit');
+      setTimeout(() => toast.remove(), 300);
+    }, 2500);
+  }
+
+
+  /* ================================================================
+   *  PINTEREST MODAL SYSTEM
+   * ================================================================ */
+  let currentPinProduct = null;
+
+  function openPinterestModal(productId) {
+    const product = allProducts.find(p => p.id === productId);
+    if (!product) return;
+    currentPinProduct = product;
+
+    const content = document.getElementById('pinterest-content');
+    content.innerHTML = `
+      <div class="flex items-center gap-2 mb-4">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E60023" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="17" y2="22"/><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"/></svg>
+        <h3 class="text-lg font-semibold text-[#00073F]">Save to Pinterest</h3>
+      </div>
+      <div class="flex gap-3 mb-6">
+        <img src="${product.image}" alt="${product.title}" class="w-20 h-20 object-cover rounded-lg">
+        <div>
+          <p class="text-sm font-medium text-[#00073F] line-clamp-2">${product.title}</p>
+          <p class="text-sm text-[#888888] mt-1">$${product.price.toFixed(2)}</p>
+        </div>
+      </div>
+      <div class="flex gap-2">
+        <button onclick="handleSavePin()"
+                class="flex-1 flex items-center justify-center gap-2 py-3 bg-[#E60023] text-white text-sm font-semibold rounded-full hover:bg-[#cc0020] transition-colors">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="17" y2="22"/><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"/></svg>
+          Save Pin
+        </button>
+        <button onclick="closePinterestModal()"
+                class="flex-1 py-3 border border-gray-200 text-sm font-medium text-[#00073F] rounded-full hover:bg-gray-50 transition-colors">
+          Cancel
+        </button>
+      </div>
+    `;
+
+    document.getElementById('pinterest-modal').classList.remove('hidden');
+  }
+
+  function handleSavePin() {
+    if (!currentPinProduct) return;
+    const content = document.getElementById('pinterest-content');
+    content.innerHTML = `
+      <div class="flex flex-col items-center py-6">
+        <svg class="w-12 h-12 text-emerald-500 mb-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+        <p class="text-lg font-semibold text-[#00073F]">Pinned!</p>
+        <p class="text-sm text-[#888888] mt-1">${currentPinProduct.title} was saved to your Pinterest board.</p>
+      </div>
+    `;
+    setTimeout(() => closePinterestModal(), 1500);
+  }
+
+  function closePinterestModal() {
+    document.getElementById('pinterest-modal').classList.add('hidden');
+    currentPinProduct = null;
+  }
+
+
+  /* ================================================================
+   *  PRODUCT RENDERING ENGINE
+   * ================================================================ */
+  function renderProductCard(product) {
+    return `
+      <div class="relative group product-card bg-white rounded-2xl overflow-hidden shadow-sm" data-product-id="${product.id}">
+        <!-- Image Container -->
+        <div class="relative aspect-[4/5] overflow-hidden bg-gray-50">
+          <img src="${product.image}" alt="${product.title}"
+               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy"
+               onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 500%22%3E%3Crect fill=%22%23f3f4f6%22 width=%22400%22 height=%22500%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%239ca3af%22 font-family=%22Inter%22 font-size=%2216%22%3EImage unavailable%3C/text%3E%3C/svg%3E'">
+
+          ${product.badge ? `<span class="absolute top-3 left-3 px-3 py-1 bg-[#FF6B5B] text-white text-xs font-semibold uppercase tracking-wider rounded-full">${product.badge}</span>` : ''}
+
+          <!-- Pinterest Pin Button -->
+          <button onclick="event.stopPropagation(); openPinterestModal('${product.id}')"
+                  class="pin-btn absolute top-3 right-3 w-9 h-9 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-[#E60023] hover:text-white text-[#E60023] z-20"
+                  title="Pin to Pinterest">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="17" y2="22"/><path d="M5 17h14v-1.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V6h1a2 2 0 0 0 0-4H8a2 2 0 0 0 0 4h1v4.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24Z"/></svg>
+          </button>
+
+          <!-- Quick Actions Overlay -->
+          <div class="absolute inset-x-0 bottom-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
+            <div class="flex gap-2">
+              <button onclick="event.stopPropagation(); handleAddToCart('${product.id}')"
+                      class="flex-1 flex items-center justify-center gap-2 py-3 bg-[#00073F] text-white text-xs font-semibold uppercase tracking-wider rounded-full hover:bg-[#003CFF] transition-colors duration-200">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                Add to Cart
+              </button>
+              <a href="${product.affiliateLink}" target="_blank" rel="noopener noreferrer"
+                 class="flex items-center justify-center w-12 h-12 bg-white text-[#00073F] rounded-full hover:bg-[#003CFF] hover:text-white transition-colors duration-200 shadow-lg"
+                 title="Shop on AliExpress" onclick="event.stopPropagation()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="p-4">
+          <p class="text-xs font-medium uppercase tracking-wider text-[#888888] mb-1">${product.category}</p>
+          <h3 class="text-sm font-medium text-[#00073F] mb-2 leading-snug line-clamp-2">${product.title}</h3>
+          <div class="flex items-center gap-2 mb-2">
+            <div class="flex items-center gap-0.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <span class="text-xs font-medium text-[#00073F]">${product.rating}</span>
+            </div>
+            <span class="text-xs text-[#888888]">(${product.reviews.toLocaleString()})</span>
+          </div>
+          <p class="text-lg font-semibold text-[#00073F]">${product.currency}${product.price.toFixed(2)}</p>
+        </div>
+      </div>
+    `;
+  }
+
+  function handleAddToCart(productId) {
+    const product = allProducts.find(p => p.id === productId);
+    if (product) {
+      Cart.addItem(product);
+      showToast(`${product.title} added to cart!`);
+    }
+  }
+
+  function handleCartCheckout() {
+    const firstItem = Cart.items[0];
+    if (firstItem) {
+      window.open(firstItem.product.affiliateLink, '_blank', 'noopener,noreferrer');
+    }
+  }
+
+  function renderProductsGrid() {
+    const grid = document.getElementById('products-grid');
+    const empty = document.getElementById('products-empty');
+
+    const filtered = activeCategory === 'All'
+      ? allProducts
+      : allProducts.filter(p => p.category === activeCategory);
+
+    if (filtered.length === 0) {
+      grid.classList.add('hidden');
+      empty.classList.remove('hidden');
+    } else {
+      empty.classList.add('hidden');
+      grid.classList.remove('hidden');
+      grid.innerHTML = filtered.map(renderProductCard).join('');
+    }
+  }
+
+
+  /* ================================================================
+   *  CATEGORY FILTER BUTTONS
+   * ================================================================ */
+  function renderCategoryFilters() {
+    const container = document.getElementById('category-filters');
+    /* Keep the filter icon that's already in the HTML */
+    const filterIcon = container.querySelector('svg');
+    container.innerHTML = '';
+    container.appendChild(filterIcon);
+
+    CATEGORIES.forEach(cat => {
+      const btn = document.createElement('button');
+      btn.className = `px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider transition-all duration-300 ${
+        activeCategory === cat
+          ? 'bg-[#003CFF] text-white'
+          : 'bg-white/10 text-white/60 hover:bg-white/20 hover:text-white'
+      }`;
+      btn.textContent = cat;
+      btn.onclick = () => {
+        activeCategory = cat;
+        renderCategoryFilters();
+        renderProductsGrid();
+      };
+      container.appendChild(btn);
+    });
+  }
+
+
+  /* ================================================================
+   *  FEATURED SECTION CAROUSEL
+   * ================================================================ */
+  function renderFeatured() {
+    if (allProducts.length === 0) return;
+
+    const product = allProducts[featuredIndex];
+    const imagesContainer = document.getElementById('featured-images');
+    const dotsContainer = document.getElementById('featured-dots');
+
+    /* Render all product images for crossfade */
+    imagesContainer.innerHTML = allProducts.map((p, idx) => `
+      <img src="${p.image}" alt="${p.title}"
+           class="absolute inset-0 w-full h-full object-cover featured-img ${idx === featuredIndex ? 'opacity-100' : 'opacity-0'}">
+    `).join('');
+
+    /* Render navigation dots */
+    dotsContainer.innerHTML = allProducts.map((_, idx) => `
+      <button onclick="setFeaturedIndex(${idx})"
+              class="h-2 rounded-full transition-all duration-300 ${idx === featuredIndex ? 'dot-active' : 'dot-inactive'}">
+      </button>
+    `).join('');
+
+    /* Update text content */
+    document.getElementById('featured-title').textContent = product.title;
+    document.getElementById('featured-rating').innerHTML = `
+      <div class="flex items-center gap-1">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <span class="text-sm font-medium text-[#00073F]">${product.rating}</span>
+      </div>
+      <span class="text-sm text-[#888888]">(${product.reviews.toLocaleString()} reviews)</span>
+    `;
+    document.getElementById('featured-desc').textContent = product.description;
+    document.getElementById('featured-price').textContent = product.currency + product.price.toFixed(2);
+  }
+
+  function setFeaturedIndex(idx) {
+    featuredIndex = idx;
+    renderFeatured();
+    /* Reset auto-rotation timer */
+    if (featuredInterval) clearInterval(featuredInterval);
+    featuredInterval = setInterval(() => {
+      featuredIndex = (featuredIndex + 1) % allProducts.length;
+      renderFeatured();
+    }, 4000);
+  }
+
+  function handleFeaturedAddToCart() {
+    if (allProducts.length === 0) return;
+    const product = allProducts[featuredIndex];
+    Cart.addItem(product);
+    showToast(`${product.title} added to cart!`);
+  }
+
+  function handleFeaturedShopNow() {
+    if (allProducts.length === 0) return;
+    window.open(allProducts[featuredIndex].affiliateLink, '_blank', 'noopener,noreferrer');
+  }
+
+
+  /* ================================================================
+   *  NEWSLETTER FORM
+   * ================================================================ */
+  function handleNewsletterSubmit(e) {
+    e.preventDefault();
+    const emailInput = document.getElementById('newsletter-email');
+    if (!emailInput.value.trim()) return;
+
+    document.getElementById('newsletter-form').classList.add('hidden');
+    document.getElementById('newsletter-success').classList.remove('hidden');
+    document.getElementById('newsletter-success').classList.add('flex');
+    emailInput.value = '';
+
+    setTimeout(() => {
+      document.getElementById('newsletter-form').classList.remove('hidden');
+      document.getElementById('newsletter-success').classList.add('hidden');
+      document.getElementById('newsletter-success').classList.remove('flex');
+    }, 4000);
+  }
+
+
+  /* ================================================================
+   *  MOBILE MENU
+   * ================================================================ */
+  let mobileMenuOpen = false;
+
+  function toggleMobileMenu() {
+    mobileMenuOpen = !mobileMenuOpen;
+    document.getElementById('mobile-menu').classList.toggle('hidden', !mobileMenuOpen);
+    document.getElementById('menu-icon-open').classList.toggle('hidden', mobileMenuOpen);
+    document.getElementById('menu-icon-close').classList.toggle('hidden', !mobileMenuOpen);
+  }
+
+  function closeMobileMenu() {
+    mobileMenuOpen = false;
+    document.getElementById('mobile-menu').classList.add('hidden');
+    document.getElementById('menu-icon-open').classList.remove('hidden');
+    document.getElementById('menu-icon-close').classList.add('hidden');
+  }
+
+
+  /* ================================================================
+   *  NAVIGATION SCROLL EFFECT
+   * ================================================================ */
+  function initNavScroll() {
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        nav.classList.add('bg-white/90', 'backdrop-blur-xl', 'shadow-sm');
+        nav.classList.remove('bg-transparent');
+      } else {
+        nav.classList.remove('bg-white/90', 'backdrop-blur-xl', 'shadow-sm');
+        nav.classList.add('bg-transparent');
+      }
+    }, { passive: true });
+  }
+
+
+  /* ================================================================
+   *  WebGL PROCEDURAL SHADER BACKGROUND
+   *  Ported 1:1 from React HeroSection GLSL shaders
+   * ================================================================ */
+  function initWebGL() {
+    const canvas = document.getElementById('hero-canvas');
+    if (!canvas) return;
+
+    const gl = canvas.getContext('webgl', { alpha: false, antialias: false });
+    if (!gl) {
+      /* Fallback: show a gradient if WebGL is unavailable */
+      canvas.style.background = 'linear-gradient(135deg, #f8f8fa 0%, #e8e8ee 100%)';
+      return;
+    }
+
+    /* Enable derivatives extension for dFdx/dFdy in fragment shader */
+    gl.getExtension('OES_standard_derivatives');
+
+    /* ---- Vertex Shader ---- */
+    const VERT_SRC = `
+      attribute vec2 a_pos;
+      void main() {
+        gl_Position = vec4(a_pos, 0, 1);
+      }
+    `;
+
+    /* ---- Fragment Shader (procedural leather texture + blast effects) ---- */
+    const FRAG_SRC = `
+      #extension GL_OES_standard_derivatives : enable
+      precision highp float;
+
+      uniform float u_time;
+      uniform vec2 u_res;
+      uniform float u_scrollSpeed;
+      uniform vec2 u_mouse;
+      uniform vec3 u_blast;
+
+      vec4 hash43(vec3 p) {
+        vec4 p4 = fract(vec4(p.xyzx) * vec4(.1031, .1030, .0973, .1099));
+        p4 += dot(p4, p4.wzxy + 33.33);
+        return fract((p4.xxyz + p4.yzzw) * p4.zywx);
+      }
+
+      float hash41(float n) {
+        return fract(sin(n * 127.1) * 43758.5453);
+      }
+
+      float noise3(vec3 p) {
+        vec3 i = floor(p);
+        vec3 f = fract(p);
+        f = f * f * (3.0 - 2.0 * f);
+        float c000 = hash43(i).x;
+        float c100 = hash43(i + vec3(1,0,0)).x;
+        float c010 = hash43(i + vec3(0,1,0)).x;
+        float c110 = hash43(i + vec3(1,1,0)).x;
+        float c001 = hash43(i + vec3(0,0,1)).x;
+        float c101 = hash43(i + vec3(1,0,1)).x;
+        float c011 = hash43(i + vec3(0,1,1)).x;
+        float c111 = hash43(i + vec3(1,1,1)).x;
+        float x0 = mix(c000, c100, f.x);
+        float x1 = mix(c010, c110, f.x);
+        float y0 = mix(x0, x1, f.y);
+        float x2 = mix(c001, c101, f.x);
+        float x3 = mix(c011, c111, f.x);
+        float y1 = mix(x2, x3, f.y);
+        return mix(y0, y1, f.z);
+      }
+
+      float fbm(vec3 p, float dm) {
+        float v = 0.0;
+        float a = 0.5;
+        vec3 V = vec3(0);
+        for (int i = 0; i < 4; i++) {
+          v += a * noise3(p + V);
+          p = p * 2.1 + V * 0.3;
+          a *= 0.45;
+          V = V * 1.3 + vec3(1.7, 5.1, 0.0);
+        }
+        return v * pow(0.45 * 0.45, dm);
+      }
+
+      vec3 leather(vec2 uv, float detail) {
+        uv += vec2(0.01);
+        float n1 = fbm(vec3(uv * 8.0, 1.0), detail);
+        float n2 = fbm(vec3(uv * 15.0 + vec2(n1 * 1.5), 2.0), detail - 0.5);
+        float n3 = fbm(vec3(uv * 25.0 + vec2(n2 * 1.0), 3.0), detail - 1.0);
+        float g = length(vec2(dFdx(n2), dFdy(n2))) * 2.5;
+        vec3 base = vec3(0.96, 0.96, 0.98);
+        vec3 pore = mix(vec3(0.88, 0.88, 0.90), vec3(0.78, 0.78, 0.80), n2);
+        vec3 color = mix(base, pore, n1 * 0.5);
+        float lit = 0.8 + 0.4 * n2 - 0.3 * g;
+        vec3 col = color * lit;
+        col += (n3 - 0.5) * 0.02;
+        col += (noise3(vec3(uv * 50.0, 4.0)) - 0.5) * 0.015;
+        return col;
+      }
+
+      void main() {
+        vec2 uv = gl_FragCoord.xy / u_res;
+        vec3 leath = leather(uv * 3.0, 1.0);
+        vec2 distort = vec2(0.0);
+        float blastMask = 0.0;
+        float tintMask = 0.0;
+
+        if (u_blast.x > 0.0) {
+          for (float i = 0.0; i < 8.0; i++) {
+            float rnd = hash41(u_blast.y * 7.31 + i * 1.73);
+            float bx = rnd;
+            float by = fract(rnd * 13.37);
+            float angle = u_blast.y * 3.7 + i * 0.89;
+            vec2 bdir = vec2(cos(angle), sin(angle));
+            vec2 buv = uv - vec2(bx, by);
+            float bd = dot(buv, bdir);
+            float bperp = dot(buv, vec2(-bdir.y, bdir.x));
+            float bwidth = 0.3 + 0.3 * fract(rnd * 5.17);
+            float bfade = smoothstep(0.6, 0.0, length(buv));
+            float bmask = smoothstep(0.02, 0.0, abs(bd)) * smoothstep(bwidth, 0.0, abs(bperp)) * bfade;
+            blastMask += bmask;
+            tintMask += smoothstep(0.08, 0.0, abs(bd)) * smoothstep(bwidth + 0.15, 0.0, abs(bperp)) * bfade;
+            distort += bdir * bmask * 0.15;
+          }
+        }
+
+        blastMask = min(blastMask, 1.0);
+        tintMask = min(tintMask, 1.0);
+        vec3 blastTex = leather((uv + distort) * 3.0, 1.0);
+        vec3 tint = vec3(0.0, 0.24, 1.0);
+        vec3 col = mix(leath, blastTex, blastMask);
+        col += tint * tintMask * 0.2;
+
+        if (u_mouse.x > 0.0) {
+          float md = length(gl_FragCoord.xy - u_mouse);
+          col += exp(-md * md * 0.0001) * vec3(0.1, 0.2, 0.5) * 0.5;
+        }
+
+        gl_FragColor = vec4(col, 1.0);
+      }
+    `;
+
+    /* ---- Compile shaders ---- */
+    function createShader(type, source) {
+      const s = gl.createShader(type);
+      gl.shaderSource(s, source);
+      gl.compileShader(s);
+      if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) {
+        console.warn('Shader compile error:', gl.getShaderInfoLog(s));
+      }
+      return s;
+    }
+
+    const vs = createShader(gl.VERTEX_SHADER, VERT_SRC);
+    const fs = createShader(gl.FRAGMENT_SHADER, FRAG_SRC);
+    const program = gl.createProgram();
+    gl.attachShader(program, vs);
+    gl.attachShader(program, fs);
+    gl.linkProgram(program);
+    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+      console.warn('Program link error:', gl.getProgramInfoLog(program));
+      canvas.style.background = 'linear-gradient(135deg, #f8f8fa 0%, #e8e8ee 100%)';
+      return;
+    }
+    gl.useProgram(program);
+
+    /* ---- Full-screen quad geometry ---- */
+    const buffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+    const aPos = gl.getAttribLocation(program, 'a_pos');
+    gl.enableVertexAttribArray(aPos);
+    gl.vertexAttribPointer(aPos, 2, gl.FLOAT, false, 0, 0);
+
+    /* ---- Texture setup ---- */
+    const tex = gl.createTexture();
+    gl.bindTexture(gl.TEXTURE_2D, tex);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.REPEAT);
+    gl.activeTexture(gl.TEXTURE0);
+    gl.uniform1i(gl.getUniformLocation(program, 'u_texture'), 0);
+
+    /* ---- Uniforms ---- */
+    const uTime = gl.getUniformLocation(program, 'u_time');
+    const uRes = gl.getUniformLocation(program, 'u_res');
+    const uScrollSpeed = gl.getUniformLocation(program, 'u_scrollSpeed');
+    const uMouse = gl.getUniformLocation(program, 'u_mouse');
+    const uBlast = gl.getUniformLocation(program, 'u_blast');
+
+    /* ---- Reactive state ---- */
+    let scrollVel = 0;
+    let lastScroll = 0;
+    let mouseX = -1, mouseY = -1;
+    let blastTimer = 0, blastSeed = 0;
+
+    /* ---- Canvas resize handler ---- */
+    function resize() {
+      const dpr = Math.min(window.devicePixelRatio, 1.5);
+      canvas.width = canvas.offsetWidth * dpr;
+      canvas.height = canvas.offsetHeight * dpr;
+      gl.viewport(0, 0, canvas.width, canvas.height);
+    }
+    resize();
+    window.addEventListener('resize', resize);
+
+    /* ---- Mouse tracking ---- */
+    window.addEventListener('mousemove', (e) => {
+      const dpr = Math.min(window.devicePixelRatio, 1.5);
+      mouseX = e.clientX * dpr;
+      mouseY = (canvas.offsetHeight - e.clientY) * dpr;
+    }, { passive: true });
+
+    /* ---- Scroll velocity → blast trigger ---- */
+    window.addEventListener('scroll', () => {
+      const vel = window.scrollY - lastScroll;
+      scrollVel = vel;
+      lastScroll = window.scrollY;
+      if (Math.abs(vel) > 2) {
+        blastTimer = 1.0;
+        blastSeed = Math.random() * 100;
+      }
+    }, { passive: true });
+
+    /* ---- Render loop ---- */
+    const startTime = performance.now();
+    function render() {
+      const elapsed = (performance.now() - startTime) / 1000;
+      gl.uniform1f(uTime, elapsed);
+      gl.uniform2f(uRes, canvas.width, canvas.height);
+
+      scrollVel *= 0.92;
+      gl.uniform1f(uScrollSpeed, Math.abs(scrollVel));
+      gl.uniform2f(uMouse, mouseX, mouseY);
+
+      blastTimer *= 0.95;
+      gl.uniform3f(uBlast, blastTimer, blastSeed, 0);
+
+      gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+      requestAnimationFrame(render);
+    }
+    requestAnimationFrame(render);
+  }
+
+
+  /* ================================================================
+   *  FETCH PRODUCTS & INITIALIZE APPLICATION
+   * ================================================================ */
+  async function loadProducts() {
+    const loading = document.getElementById('products-loading');
+    const error = document.getElementById('products-error');
+    const grid = document.getElementById('products-grid');
+
+    loading.classList.remove('hidden');
+    error.classList.add('hidden');
+    grid.classList.add('hidden');
+
+    try {
+      const response = await fetch('./products.json');
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const data = await response.json();
+      allProducts = data.products || [];
+
+      /* Hide loading, show grid */
+      loading.classList.add('hidden');
+
+      /* Render everything */
+      renderCategoryFilters();
+      renderProductsGrid();
+      renderFeatured();
+
+      /* Start featured auto-rotation */
+      featuredInterval = setInterval(() => {
+        featuredIndex = (featuredIndex + 1) % allProducts.length;
+        renderFeatured();
+      }, 4000);
+
+    } catch (err) {
+      console.error('Failed to load products:', err);
+      loading.classList.add('hidden');
+      error.classList.remove('hidden');
+    }
+  }
+
+  /* ---- Master Init ---- */
+  function init() {
+    /* Set footer year */
+    document.getElementById('footer-year').textContent =
+      new Date().getFullYear() + ' Smart Kitchen Gadgets. All rights reserved.';
+
+    /* Init subsystems */
+    initNavScroll();
+    initWebGL();
+
+    /* Initial cart render (empty state) */
+    Cart.render();
+
+    /* Load products from JSON */
+    loadProducts();
+  }
+
+  /* ---- Boot ---- */
+  document.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>

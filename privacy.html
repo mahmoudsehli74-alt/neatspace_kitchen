@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Smart Kitchen Gadgets</title>
+  <meta name="description" content="Privacy Policy for Smart Kitchen Gadgets. Learn how we collect, use, and protect your personal information. GDPR compliant. Pinterest and affiliate disclosure.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://neatspace-kitchen.github.io/privacy.html">
+
+  <!-- ==================== Google Fonts: Inter ==================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- ==================== Tailwind CSS CDN ==================== -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- ==================== Custom Styles ==================== -->
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #555; }
+
+    /* Badge Pulse for cart */
+    @keyframes badgePulse {
+      0%, 100% { transform: scale(1); }
+      50%      { transform: scale(1.1); }
+    }
+    .badge-pulse { animation: badgePulse 2s ease-in-out infinite; }
+  </style>
+</head>
+
+<body class="bg-white text-[#00073F] antialiased min-h-screen flex flex-col">
+
+  <!-- ================================================================
+       NAVIGATION
+       ================================================================ -->
+  <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white/90 backdrop-blur-xl shadow-sm">
+    <div class="w-full px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2">
+          <span class="text-xl lg:text-2xl font-bold tracking-tight text-[#00073F]">SmartKitchen</span>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm font-medium text-[#00073F]/80 hover:text-[#003CFF] transition-colors duration-200">Home</a>
+          <a href="index.html#products" class="text-sm font-medium text-[#00073F]/80 hover:text-[#003CFF] transition-colors duration-200">Products</a>
+          <a href="index.html#tips" class="text-sm font-medium text-[#00073F]/80 hover:text-[#003CFF] transition-colors duration-200">Tips</a>
+          <a href="privacy.html" class="text-sm font-medium text-[#003CFF] transition-colors duration-200">Privacy</a>
+        </div>
+
+        <!-- Right Side -->
+        <div class="flex items-center gap-4">
+          <!-- Cart Button -->
+          <a href="index.html" class="relative p-2 rounded-full hover:bg-[#00073F]/5 transition-colors duration-200" aria-label="Go to shop">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="md:hidden p-2 rounded-full hover:bg-[#00073F]/5 transition-colors duration-200" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+            <svg id="menu-icon-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            <svg id="menu-icon-close" class="hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white/95 backdrop-blur-xl border-t border-gray-100">
+      <div class="px-4 sm:px-6 py-4 flex flex-col gap-2">
+        <a href="index.html" class="py-3 px-4 text-sm font-medium text-[#00073F]/80 hover:text-[#003CFF] hover:bg-[#00073F]/5 rounded-lg transition-colors">Home</a>
+        <a href="index.html#products" class="py-3 px-4 text-sm font-medium text-[#00073F]/80 hover:text-[#003CFF] hover:bg-[#00073F]/5 rounded-lg transition-colors">Products</a>
+        <a href="index.html#tips" class="py-3 px-4 text-sm font-medium text-[#00073F]/80 hover:text-[#003CFF] hover:bg-[#00073F]/5 rounded-lg transition-colors">Tips</a>
+        <a href="privacy.html" class="py-3 px-4 text-sm font-medium text-[#003CFF] bg-[#00073F]/5 rounded-lg transition-colors">Privacy</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ================================================================
+       HERO HEADER — Dark-themed Privacy Banner
+       ================================================================ -->
+  <section class="pt-32 pb-16 bg-[#00073F]">
+    <div class="px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-4xl mx-auto">
+      <!-- Back Link -->
+      <a href="index.html" class="inline-flex items-center gap-2 text-sm text-white/60 hover:text-[#003CFF] transition-colors mb-8">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        Back to Home
+      </a>
+
+      <!-- Title -->
+      <div class="flex items-center gap-3 mb-4">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#003CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#003CFF]">Legal</p>
+      </div>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-normal leading-[1.1] text-white mb-4">
+        Privacy Policy
+      </h1>
+      <p class="text-base text-white/60 max-w-xl">
+        Your privacy matters to us. This policy explains how we collect, use, and protect your personal information.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       PRIVACY POLICY CONTENT
+       ================================================================ -->
+  <section class="py-16 lg:py-24 flex-1">
+    <div class="px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24 max-w-3xl mx-auto">
+
+      <!-- ---- GDPR Compliance ---- -->
+      <div class="mb-16">
+        <div class="flex items-center gap-3 mb-6">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#003CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+          <h2 class="text-xl font-medium text-[#00073F]">GDPR Compliance</h2>
+        </div>
+        <p class="text-[#888888] leading-relaxed">
+          Smart Kitchen Gadgets is committed to protecting your personal data in accordance with the General Data Protection Regulation (GDPR). We act as a data controller for the information you provide directly to us through our website.
+        </p>
+        <p class="text-[#888888] leading-relaxed mt-4">
+          Your rights under GDPR include: the right to access your data, the right to rectification, the right to erasure ("right to be forgotten"), the right to restrict processing, the right to data portability, and the right to object to processing. To exercise any of these rights, please contact us at privacy@smartkitchengadgets.com.
+        </p>
+      </div>
+
+      <!-- ---- Data We Collect ---- -->
+      <div class="mb-16">
+        <div class="flex items-center gap-3 mb-6">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#003CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg>
+          <h2 class="text-xl font-medium text-[#00073F]">Data We Collect</h2>
+        </div>
+        <p class="text-[#888888] leading-relaxed">
+          We collect minimal data to provide you with the best experience:
+        </p>
+        <ul class="mt-4 space-y-3">
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 bg-[#003CFF] rounded-full mt-2 flex-shrink-0"></span>
+            <span class="text-[#888888]">
+              <strong class="text-[#00073F]">Browsing Data:</strong> We use cookies and similar technologies to understand how you interact with our website, which products you view, and how we can improve your experience.
+            </span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 bg-[#003CFF] rounded-full mt-2 flex-shrink-0"></span>
+            <span class="text-[#888888]">
+              <strong class="text-[#00073F]">Newsletter Subscriptions:</strong> When you subscribe to our newsletter, we collect your email address to send you updates, deals, and kitchen tips. You can unsubscribe at any time.
+            </span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="w-1.5 h-1.5 bg-[#003CFF] rounded-full mt-2 flex-shrink-0"></span>
+            <span class="text-[#888888]">
+              <strong class="text-[#00073F]">Cart Data:</strong> Product selections in your cart are stored locally in your browser and are not transmitted to our servers.
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ---- Cookies & Tracking ---- -->
+      <div class="mb-16">
+        <div class="flex items-center gap-3 mb-6">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#003CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5v.01"/><path d="M16 15.5v.01"/><path d="M12 12v.01"/><path d="M11 17v.01"/><path d="M7 14v.01"/></svg>
+          <h2 class="text-xl font-medium text-[#00073F]">Cookies & Tracking</h2>
+        </div>
+        <p class="text-[#888888] leading-relaxed">
+          Our website uses cookies to enhance your browsing experience. Cookies are small text files stored on your device that help us:
+        </p>
+        <ul class="mt-4 space-y-2 text-[#888888]">
+          <li class="flex items-start gap-2">
+            <span class="text-[#003CFF] mt-0.5">•</span>
+            Remember your preferences and settings
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-[#003CFF] mt-0.5">•</span>
+            Understand which products are most popular
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-[#003CFF] mt-0.5">•</span>
+            Improve website performance and functionality
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-[#003CFF] mt-0.5">•</span>
+            Enable Pinterest rich pins for product sharing
+          </li>
+        </ul>
+        <p class="text-[#888888] leading-relaxed mt-4">
+          You can control cookies through your browser settings. Disabling cookies may affect some features of our website.
+        </p>
+      </div>
+
+      <!-- ---- Affiliate Disclosure ---- -->
+      <div class="mb-16">
+        <div class="flex items-center gap-3 mb-6">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#003CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+          <h2 class="text-xl font-medium text-[#00073F]">Affiliate Disclosure</h2>
+        </div>
+
+        <!-- FTC Notice Card -->
+        <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-6">
+          <p class="text-sm font-medium text-amber-800 mb-2">FTC Disclosure Statement</p>
+          <p class="text-sm text-amber-700 leading-relaxed">
+            Smart Kitchen Gadgets participates in affiliate marketing programs. This means we may earn a commission when you click on links to products and make purchases on AliExpress or other partner sites, at no additional cost to you.
+          </p>
+        </div>
+
+        <p class="text-[#888888] leading-relaxed">
+          All product links on this website are affiliate links. When you click "Shop on AliExpress" or "Check Price on AliExpress," you will be redirected to the AliExpress marketplace through our affiliate tracking link. This helps us maintain and improve our website while providing you with curated product recommendations.
+        </p>
+        <p class="text-[#888888] leading-relaxed mt-4">
+          We only recommend products we genuinely believe in. Our editorial opinions and reviews are independent and not influenced by affiliate partnerships.
+        </p>
+      </div>
+
+      <!-- ---- Pinterest Integration ---- -->
+      <div class="mb-16">
+        <h2 class="text-xl font-medium text-[#00073F] mb-6">Pinterest Integration</h2>
+        <p class="text-[#888888] leading-relaxed">
+          Our website includes Pinterest sharing features and rich pins for products. When you use the Pinterest "Save" button on our product pages, you are subject to Pinterest's own Privacy Policy and Terms of Service. We do not receive or store any data about your Pinterest activity.
+        </p>
+      </div>
+
+      <!-- ---- Third-Party Services ---- -->
+      <div class="mb-16">
+        <h2 class="text-xl font-medium text-[#00073F] mb-6">Third-Party Services</h2>
+        <p class="text-[#888888] leading-relaxed">
+          We use the following third-party services to operate our website:
+        </p>
+        <ul class="mt-4 space-y-2 text-[#888888]">
+          <li>
+            <strong class="text-[#00073F]">AliExpress Affiliate Program</strong> — Product fulfillment and purchasing
+          </li>
+          <li>
+            <strong class="text-[#00073F]">Pinterest</strong> — Social sharing and rich pins
+          </li>
+          <li>
+            <strong class="text-[#00073F]">Google Fonts</strong> — Typography delivery
+          </li>
+        </ul>
+        <p class="text-[#888888] leading-relaxed mt-4">
+          Each of these services has their own privacy policy and data handling practices. We encourage you to review their policies for more information.
+        </p>
+      </div>
+
+      <!-- ---- Contact Us ---- -->
+      <div class="mb-16">
+        <h2 class="text-xl font-medium text-[#00073F] mb-6">Contact Us</h2>
+        <p class="text-[#888888] leading-relaxed">
+          If you have any questions about this Privacy Policy, our data practices, or would like to exercise your privacy rights, please contact us:
+        </p>
+        <div class="mt-4 p-4 bg-gray-50 rounded-xl">
+          <p class="text-sm text-[#00073F] font-medium">Smart Kitchen Gadgets</p>
+          <p class="text-sm text-[#888888]">Email: privacy@smartkitchengadgets.com</p>
+        </div>
+      </div>
+
+      <!-- ---- Last Updated ---- -->
+      <div class="pt-8 border-t border-gray-100">
+        <p class="text-xs text-[#888888]" id="last-updated"></p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       FOOTER
+       ================================================================ -->
+  <footer class="w-full bg-[#00073F] text-white">
+    <div class="px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24 py-16 lg:py-20">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-16">
+
+        <!-- Brand Column -->
+        <div class="col-span-2 md:col-span-1">
+          <a href="index.html" class="text-2xl font-bold tracking-tight">SmartKitchen</a>
+          <p class="text-sm text-white/50 mt-4 leading-relaxed max-w-xs">
+            Curated smart kitchen gadgets for the modern home chef. Elevate your cooking experience.
+          </p>
+        </div>
+
+        <!-- Shop Links -->
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-white/40 mb-4">Shop</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html#products" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">All Products</a></li>
+            <li><a href="index.html#products" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">Best Sellers</a></li>
+            <li><a href="index.html#products" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">New Arrivals</a></li>
+            <li><a href="index.html#products" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">On Sale</a></li>
+          </ul>
+        </div>
+
+        <!-- Support Links -->
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-white/40 mb-4">Support</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">Contact Us</a></li>
+            <li><a href="#" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">Shipping Info</a></li>
+            <li><a href="#" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">Returns</a></li>
+            <li><a href="#" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Links -->
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-white/40 mb-4">Legal</h4>
+          <ul class="space-y-3">
+            <li><a href="privacy.html" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">Cookie Policy</a></li>
+            <li><a href="privacy.html" class="text-sm text-white/60 hover:text-[#003CFF] transition-colors">GDPR</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-white/10">
+      <div class="px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-white/40" id="footer-year"></p>
+        <div class="flex items-center gap-1 text-xs text-white/40">
+          <span>Affiliate links powered by</span>
+          <a href="https://www.aliexpress.com" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-1 text-white/60 hover:text-[#FF6B5B] transition-colors">
+            AliExpress
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ================================================================
+       JAVASCRIPT
+       ================================================================ -->
+  <script>
+    /* ---- Mobile Menu ---- */
+    let mobileMenuOpen = false;
+
+    function toggleMobileMenu() {
+      mobileMenuOpen = !mobileMenuOpen;
+      document.getElementById('mobile-menu').classList.toggle('hidden', !mobileMenuOpen);
+      document.getElementById('menu-icon-open').classList.toggle('hidden', mobileMenuOpen);
+      document.getElementById('menu-icon-close').classList.toggle('hidden', !mobileMenuOpen);
+    }
+
+    /* ---- Dynamic Content ---- */
+    document.addEventListener('DOMContentLoaded', () => {
+      /* Footer year */
+      document.getElementById('footer-year').textContent =
+        new Date().getFullYear() + ' Smart Kitchen Gadgets. All rights reserved.';
+
+      /* Last updated date */
+      document.getElementById('last-updated').textContent =
+        'Last updated: ' + new Date().toLocaleDateString('en-US', {
+          year: 'numeric', month: 'long', day: 'numeric'
+        }) + '. We may update this policy from time to time. Please review it periodically.';
+    });
+  </script>
+</body>
+</html>
