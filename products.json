@@ -1,1 +1,25 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "Live Link Verification Test - neatspace_kitchen",
+    "title": "Live Link Verification Test - neatspace_kitchen",
+    "description": "",
+    "price": "49.99",
+    "originalPrice": "49.99",
+    "image": "https://example.com/live_test.jpg",
+    "images": [
+      "https://example.com/live_test.jpg"
+    ],
+    "category": "",
+    "tags": [],
+    "rating": 4.5,
+    "reviewCount": 0,
+    "inStock": true,
+    "affiliate_url": "https://www.aliexpress.com/item/1005001234567000.html",
+    "source_url": "https://www.aliexpress.com/item/1005001234567000.html",
+    "deep_link": "https://mahmoudsehli74-alt.github.io/neatspace_kitchen/?id=prod_5382d93e8d91",
+    "created_at": "2026-08-07T20:24:06.673781+00:00",
+    "style_used": "none",
+    "alt_text": "Photo of Live Link Verification Test - neatspace_kitchen"
+  }
+]
