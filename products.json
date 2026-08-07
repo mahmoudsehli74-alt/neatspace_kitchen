@@ -1,17 +1,25 @@
-{
-  "products": [
-    {
-      "id": "smart-scale-pro",
-      "title": "Smart Digital Kitchen Scale Pro",
-      "price": 29.99,
-      "currency": "$",
-      "rating": 4.8,
-      "reviews": 2341,
-      "image": "images/product-scale.jpg",
-      "category": "Measuring",
-      "badge": "Best Seller",
-      "affiliateLink": "https://www.aliexpress.com/item/smart-kitchen-scale-pro",
-      "description": "Precision digital scale with 0.1g accuracy, tempered glass surface, and smart app connectivity for nutritional tracking."
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "name": "Phase 5 Test Item",
+    "title": "Phase 5 Test Item",
+    "description": "",
+    "price": "19.99",
+    "originalPrice": "19.99",
+    "image": "https://example.com/test.jpg",
+    "images": [
+      "https://example.com/test.jpg"
+    ],
+    "category": "",
+    "tags": [],
+    "rating": 4.5,
+    "reviewCount": 0,
+    "inStock": true,
+    "affiliate_url": "https://www.aliexpress.com/item/1005001234567890.html",
+    "source_url": "https://www.aliexpress.com/item/1005001234567890.html",
+    "deep_link": "https://mahmoudsehli74-alt.github.io/neatspace_kitchen/?id=prod_3f8dcd63f1a3",
+    "created_at": "2026-08-07T20:01:16.625318+00:00",
+    "style_used": "none",
+    "alt_text": "Photo of Phase 5 Test Item"
+  }
+]
